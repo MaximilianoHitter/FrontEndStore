@@ -1,0 +1,101 @@
+:root {
+    --font: 'Quicksand';
+    --color1: #1A181B;
+    --color2: #564D65;
+    --color3: #3E8989;
+    --color4: #2CDA9D;
+    --color5: #05F140;
+}
+
+html {
+    box-sizing: boder-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    background-color: #3E8989;
+    line-height: 1.5;
+}
+
+
+/*Globales*/
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--color4);
+    font-family: var(--font);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+
+/*Header*/
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    margin: 3rem 0;
+}
+
+
+/*Navegacion*/
+
+.navegacion {
+    background-color: var(--color2);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.navegacion__enlace {
+    font-family: var(--font);
+    color: white;
+    font-size: 3rem;
+}
+
+.navegacion__enlace:hover,
+.navegacion__enlace--activo {
+    color: var(--color5);
+}
