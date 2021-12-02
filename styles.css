@@ -38,12 +38,12 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .contenedor {
     max-width: 120rem;
-    /* width: min( 120rem, 80%); */
+    /* width: min( 80%, 120rem); */
     margin: 0 auto;
 }
 
@@ -261,4 +261,103 @@ h3 {
 .bloque__titulo {
     /* text-transform: uppercase; */
     font-size: 2rem;
+}
+
+
+/*Producto*/
+
+.camisa {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.camisa__imagen {
+    grid-row: 1 / 2;
+}
+
+@media (min-width: 768px) {
+    .camisa__imagen {
+        grid-column: 1 / 2;
+    }
+}
+
+.formulario {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .formulario {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .select {
+        grid-row: 1 / 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .select {
+        grid-column: 1 / 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .cantidad {
+        grid-row: 2 / 3;
+    }
+}
+
+@media (min-width: 768px) {
+    .cantidad {
+        grid-column: 2 / 3;
+    }
+}
+
+.formulario__campo {
+    border: 1rem solid #564D65;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    font-family: var(--font);
+    padding: 1rem;
+    appearance: none;
+}
+
+.formulario__submit {
+    background-color: #564D65;
+    border: none;
+    color: #05F140;
+    font-size: 2rem;
+    font-family: var(--font);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    transition: color 1s ease;
+    transition: background-color 1s ease;
+    grid-row: 3 / 4;
+}
+
+@media (min-width: 768px) {
+    .formulario__submit {
+        grid-column: 1 / 3;
+    }
+}
+
+.formulario__submit:hover {
+    cursor: pointer;
+    background-color: #2CDA9D;
+    color: #564D65;
 }
